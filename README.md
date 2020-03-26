@@ -15,10 +15,12 @@ To ensure the display comes on in a paused and reset state, an RC timing circuit
 on the output of the 555 timer, which in turn drives the clock inhibit pin on the first 7-segment display, dominoeing to each display 
 and preventing them from counting.
 
-![](images/stop.png)
+![](images/stop.PNG)
 
 Similarly, the displacement charge of a high-pass filter is used to quickly pulse a logic high on the reset pin of
 every 4026 chip, ensuring 0s on each display at startup.
+
+![](images/reset.PNG)
 
 Each 4026 chip feeds its carry-out pin to the next chip's clock for counting. To achieve a carry-out at 60 seconds, the 4017's 6th binary
 count pin is hooked up to itself, the reset line of the 60-second counting unit, and the clock of the first minute driver chip.
