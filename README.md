@@ -14,6 +14,9 @@ the 4060 chip only divides it down to 200HZ).
 To ensure the display comes on in a paused and reset state, an RC timing circuit is used to initially latch a logic high 
 on the output of the 555 timer, which in turn drives the clock inhibit pin on the first 7-segment display, dominoeing to each display 
 and preventing them from counting.
+
+![](images/stop.png)
+
 Similarly, the displacement charge of a high-pass filter is used to quickly pulse a logic high on the reset pin of
 every 4026 chip, ensuring 0s on each display at startup.
 
